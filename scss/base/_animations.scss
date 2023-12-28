@@ -1,0 +1,25 @@
+@keyframes rotateLogotype {
+    from {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes showAside {
+    from {
+        right: -210px;
+    }
+
+    to {
+        right: 12px;
+    }
+}
+
+@keyframes hideAside {
+    from {
+        right: 12px;
+    }
+
+    to {
+        right: -210px;
+    }
+}

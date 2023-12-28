@@ -1,0 +1,408 @@
+/* BASE */
+@import url("/fonts/stylesheet.css");
+@-webkit-keyframes rotateLogotype {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@keyframes rotateLogotype {
+  from {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes showAside {
+  from {
+    right: -210px;
+  }
+  to {
+    right: 12px;
+  }
+}
+@keyframes showAside {
+  from {
+    right: -210px;
+  }
+  to {
+    right: 12px;
+  }
+}
+@-webkit-keyframes hideAside {
+  from {
+    right: 12px;
+  }
+  to {
+    right: -210px;
+  }
+}
+@keyframes hideAside {
+  from {
+    right: 12px;
+  }
+  to {
+    right: -210px;
+  }
+}
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+/*FONTS*/
+/*FONTS*/
+/*COLORS*/
+/*COLORS*/
+/*MEDIA*/
+/*MEDIA*/
+body {
+  font-family: "RF Dewi", serif;
+  color: #000;
+  font-size: 16px;
+}
+
+a {
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+a:hover {
+  color: #FD853A;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.none {
+  display: none !important;
+}
+
+.titleH1 {
+  font-size: clamp(60px, 3.102rem + 3.24vw, 95px);
+  font-weight: 800;
+  line-height: 108%;
+}
+
+.titleH2 {
+  font-size: clamp(35px, 1.65rem + 2.69vw, 64px);
+}
+
+.titleH3 {
+  font-size: clamp(24px, 1.056rem + 2.22vw, 48px);
+  font-weight: 600;
+  line-height: 95%;
+}
+
+.subtitleP {
+  font-size: clamp(14px, 0.764rem + 0.56vw, 20px);
+  font-weight: 500;
+  line-height: 116%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  border-radius: 60px;
+  background: #FD853A;
+  font-size: 16px;
+  color: #fff;
+  font-family: "RF Dewi Extended";
+  letter-spacing: -0.385px;
+  -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+.button--contact {
+  font-size: 25px;
+  font-weight: 600;
+}
+.button--aside {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+
+.button:hover, .button:focus, .button:active {
+  background-color: #ff7723;
+}
+
+.nav-icon-btn {
+  --time: 0.1s;
+  --width: 40px;
+  --height: 30px;
+  --line-height: 1px;
+  --line-margin: 2;
+  --color: #000;
+  height: var(--height);
+  width: var(--width);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-icon {
+  position: relative;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: var(--width);
+  height: var(--line-height);
+  background-color: var(--color);
+  -webkit-transition: top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+  transition: top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time);
+  transition: transform var(--time) ease-in, top var(--time) linear var(--time), -webkit-transform var(--time) ease-in;
+}
+
+.nav-icon::before {
+  top: calc(var(--line-height) * -8);
+}
+
+.nav-icon::after {
+  top: calc(var(--line-height) * 8);
+}
+
+.nav-icon.nav-icon--active {
+  background-color: transparent;
+}
+
+.nav-icon.nav-icon--active::before,
+.nav-icon.nav-icon--active::after {
+  top: 0;
+  -webkit-transition: top var(--time) linear, -webkit-transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, -webkit-transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time), -webkit-transform var(--time) ease-in var(--time);
+}
+
+.nav-icon.nav-icon--active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-icon.nav-icon--active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* BASE */
+/* BLOCK */
+.header {
+  position: relative;
+  padding: 44px 0 55px;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__row__logotype rect {
+  fill: #FD853A;
+  -webkit-transition: fill 0.2s linear;
+  transition: fill 0.2s linear;
+}
+.header__row__logotype:hover {
+  -webkit-animation: rotateLogotype 0.4s;
+          animation: rotateLogotype 0.4s;
+}
+.header__row__logotype:hover rect {
+  fill: #ff7723;
+}
+
+.header__row__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 32px;
+     -moz-column-gap: 32px;
+          column-gap: 32px;
+}
+
+.header__row__list__item {
+  font-family: "RF Dewi Extended";
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.14px;
+}
+
+.header__nav-btn {
+  display: none;
+}
+
+.aside {
+  position: fixed;
+  background-color: #fff;
+  border: 3px solid rgb(255, 180, 130);
+  border-radius: 20px;
+  padding: 10px 20px;
+  height: 500px;
+  right: -210px;
+  top: 12px;
+  width: clamp(150px, 50%, 205px);
+}
+
+.showAside {
+  -webkit-animation: showAside 0.8s forwards;
+          animation: showAside 0.8s forwards;
+}
+
+.hideAside {
+  -webkit-animation: hideAside 0.8s forwards;
+          animation: hideAside 0.8s forwards;
+}
+
+.aside__icon--close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.aside__row__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+  height: 100%;
+}
+
+.aside__row__list__item:last-child {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .header__row__list {
+    display: none;
+  }
+  .header__nav-btn {
+    display: block;
+  }
+}
+/* BLOCK */
