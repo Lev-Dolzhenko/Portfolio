@@ -16,6 +16,12 @@ a {
     max-width: 1320px;
     padding: 0 40px;
     margin: 0 auto;
+
+    &--footer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 80px;
+    }
 }
 
 .none {
@@ -30,6 +36,14 @@ a {
 
 .titleH2 {
     font-size: clamp(35px, 1.65rem + 2.69vw, 64px);
+    font-weight: 700;
+    line-height: 100%;
+
+    &--footer {
+        font-family:RF Dewi Extended;
+        line-height: normal;
+        color: $colorSecondaryWhite;
+    }
 }
 
 .titleH3 {
@@ -80,5 +94,20 @@ a {
     background-color: $colorAccentHover;
 }
 
+@include mediaTablet {
+    .container--footer {
+        row-gap: 60px;
+    }
+}
 
+@include semiTablet {
+    .container--footer {
+        row-gap: 40px;
+    }
+}
 
+@include mediaPhone {
+    .container--footer {
+        row-gap: 30px;
+    }
+}

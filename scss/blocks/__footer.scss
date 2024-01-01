@@ -1,0 +1,147 @@
+.footer {
+
+    padding-top: 100px;
+    padding-bottom: 25px;
+    background-color: $colorFooter;
+
+    ul li:first-child,
+    label {
+        color: $colorAccent;
+        row-gap: 28px;
+
+        font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+        color: $colorSecondaryWhite;
+        letter-spacing: -0.24px;
+    }
+}
+
+.footer__contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__info {
+    display: flex;
+    // flex-wrap: wrap;
+    align-items: start;
+    column-gap: 90px;
+}
+
+.footer__info__text {
+    font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+    color: $colorSecondaryWhite;
+}
+
+.footer__info__text__socials {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    column-gap: 5px;
+    margin-top: 16px;
+}
+
+.footer__info__nav {}
+
+.footer__info__contacs {}
+
+
+
+.footer__copyright {
+    color: $colorWhite;
+    font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+    letter-spacing: -0.3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@include mediaTablet {
+    .footer {
+        padding-top: 60px;
+    }
+
+    .footer__info {
+        display: grid;
+        grid-template-areas:
+            "text text text"
+            "navigation contacts form";
+        row-gap: 20px;
+        column-gap: 0;
+        &__text {
+            grid-area: text;
+        }
+
+        &__nav {
+            grid-area: navigation;
+        }
+
+        &__contacts {
+            grid-area: contact;
+        }
+
+        form {
+            grid-area: form;
+        }
+    }
+}
+
+@include semiTablet {
+    .footer {
+        padding-top: 35px;
+    }
+
+    .footer__info {
+        // grid-template-areas:
+        //     "text text"
+        //     "navigation contacts"
+        //     "form form";
+        // row-gap: 20px;
+        // column-gap: 10px;
+
+        // &__text {
+        //     grid-area: text;
+        // }
+
+        // &__nav {
+        //     grid-area: navigation;
+        // }
+
+        // &__contacts {
+        //     grid-area: contact;
+        // }
+
+        // form {
+        //     grid-area: form;
+        // }
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__contact {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .footer__copyright {
+        flex-direction: column;
+        align-items: start;
+        row-gap: 10px; 
+    }
+}
+
+@include mediaPhone {
+    .footer {
+        padding-top: 25px;
+    }
+}
