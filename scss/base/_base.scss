@@ -57,6 +57,10 @@ a {
     font-weight: 500;
     line-height: 116%;
     color: $colorSecondaryBlack;
+
+    &--benefits {
+        width: 236px;
+    }
 }
 
 
@@ -88,6 +92,17 @@ a {
         font-weight: 600;  
         padding: 5px 10px;
     }
+
+    &--benefit {
+        max-width: 412px;
+        padding: 33px 59px;
+        background-color: unset;
+        color: $colorBorder;
+        border: 1px solid $colorBorder;
+        border-radius: 60px;
+        font-size: clamp(1.25rem, 1.102rem + 0.74vw, 1.75rem);
+        letter-spacing: -0.48px;
+    }
 }
 
 .button:hover, .button:focus, .button:active {
@@ -98,6 +113,11 @@ a {
     .container--footer {
         row-gap: 60px;
     }
+
+    .button--benefit {
+        padding: 20px 30px;
+    }
+
 }
 
 @include semiTablet {
@@ -109,5 +129,9 @@ a {
 @include mediaPhone {
     .container--footer {
         row-gap: 30px;
+    }
+
+    .button--benefit {
+        padding: 10px;
     }
 }

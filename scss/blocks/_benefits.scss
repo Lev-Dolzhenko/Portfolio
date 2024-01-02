@@ -1,0 +1,70 @@
+.benefits {
+}
+
+.benefits__row {
+    padding-top: 172px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 47px;
+    img {
+        max-height: 603px;
+    }
+}
+.benefits__row__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 47px;
+    // max-width: 480px;
+}
+.titleH2 {
+    span {
+        color: $colorAccent;
+    }
+}
+
+.benefits__row__text__row {
+    display: flex;
+    align-items: center;
+    
+    column-gap: 60px;
+    row-gap: 15px;
+    flex-wrap: wrap;
+
+}
+
+.subtitleP {
+    span {
+        font-size: clamp(1.25rem, 0.954rem + 1.48vw, 2.25rem);
+        color: #1D2939;
+        letter-spacing: -0.54px;
+        font-style: italic;
+    }
+}
+
+
+@include mediaTablet {
+    .benefits__row {
+        padding-top: 130px;
+        padding-bottom: 40px;
+        flex-direction: column;
+        img {
+            display: none;
+        }
+    }
+
+    .benefits__row__text {
+        row-gap: 30px;
+    }
+}
+
+@include mediaPhone {
+    .benefits__row {
+        padding-top: 70px;
+    }
+    
+    .benefits__row__text {
+        row-gap: 18px;
+    }
+}
