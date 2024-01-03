@@ -176,9 +176,18 @@ a:hover {
 }
 
 .titleH1 {
-  font-size: clamp(60px, 3.102rem + 3.24vw, 95px);
+  font-size: clamp(2rem, 0.568rem + 7.16vw, 5.938rem);
   font-weight: 800;
   line-height: 108%;
+}
+.titleH1--welcome {
+  position: relative;
+  text-align: center;
+  font-family: RF Dewi Extended;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -1.433px;
+  color: #171717;
 }
 
 .titleH2 {
@@ -447,6 +456,7 @@ a:hover {
   right: -210px;
   top: 12px;
   width: clamp(150px, 50%, 205px);
+  z-index: 10;
 }
 
 .showAside {
@@ -488,6 +498,14 @@ a:hover {
   }
   .header__nav-btn {
     display: block;
+  }
+  .header {
+    padding: 30px 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header {
+    padding: 22px 0 28px;
   }
 }
 .benefits__row {
@@ -683,6 +701,90 @@ a:hover {
   transition: bottom 0.2s linear;
 }
 
+@media screen and (max-width: 1000px) {
+  .projects {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+  .projects__row__text {
+    row-gap: 12px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .projects {
+    padding-top: 16px;
+    padding-bottom: 36px;
+  }
+  .projects__row__text {
+    row-gap: 8px;
+  }
+}
+.welcome__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+
+.welcome__span {
+  letter-spacing: -0.3px;
+  font-weight: 600;
+  font-family: RF Dewi Extended;
+  font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+  color: #171717;
+  border: 1.275px solid var(--Gray-900, #171717);
+  border-radius: 38.235px;
+  padding: 10px 25px;
+}
+
+.container__welcome {
+  position: relative;
+}
+
+.welcome__person__row {
+  margin-top: 160px;
+}
+
+.welcome__elipse {
+  position: relative;
+  bottom: -4px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 2;
+}
+
+.welcome__person {
+  position: absolute;
+  z-index: 3;
+  max-width: 732px;
+  width: 100%;
+  height: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .welcome__span {
+    padding: 8px 24px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .welcome__span {
+    padding: 5px 14px;
+  }
+  .welcome__person__row {
+    margin-top: 64px;
+  }
+}
 .footer {
   padding-top: 100px;
   padding-bottom: 25px;

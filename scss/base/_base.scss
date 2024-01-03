@@ -29,9 +29,19 @@ a {
 }
 
 .titleH1 {
-    font-size: clamp(60px, 3.102rem + 3.24vw, 95px);
+    font-size: clamp(2rem, 0.568rem + 7.16vw, 5.938rem);
     font-weight: 800;
     line-height: 108%;
+
+    &--welcome {
+        position: relative;
+        text-align: center;
+        font-family: RF Dewi Extended;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: -1.433px;
+        color: $colorTitleH1;
+    }
 }
 
 .titleH2 {

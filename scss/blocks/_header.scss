@@ -56,6 +56,8 @@
     top: 12px;
 
     width: clamp(150px, 50%, 205px);
+
+    z-index: 10;
 }
 
 .showAside {
@@ -93,5 +95,15 @@
 
     .header__nav-btn {
         display: block;
+    }
+    
+    .header {
+        padding: 30px 40px;
+    }
+}
+
+@include mediaPhone {
+    .header {
+        padding: 22px 0 28px;
     }
 }

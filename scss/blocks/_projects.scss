@@ -102,5 +102,23 @@
   }
 
   @include mediaTablet {
-    
+    .projects {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .projects__row__text {
+        row-gap: 12px;
+    }
+  }
+
+  @include mediaPhone {
+    .projects {
+        padding-top: 16px;
+        padding-bottom: 36px;
+    }
+
+    .projects__row__text {
+        row-gap: 8px;
+    }
   }
