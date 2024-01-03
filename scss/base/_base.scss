@@ -44,12 +44,32 @@ a {
         line-height: normal;
         color: $colorSecondaryWhite;
     }
+
+    &--projects {
+        color: $colorWhite;
+    }
 }
 
 .titleH3 {
     font-size: clamp(24px, 1.056rem + 2.22vw, 48px);
     font-weight: 600;
     line-height: 95%;
+
+    &--projects {
+        // position: absolute;
+        // bottom: 20px;
+        // left: 20px;
+        color: $colorTitleH3;
+        // z-index: 2;
+    }
+
+    &--projects--notActive {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: $colorTitleH3;
+        z-index: 2;
+    }
 }
 
 .subtitleP {
@@ -60,6 +80,11 @@ a {
 
     &--benefits {
         width: 236px;
+    }
+
+    &--projects {
+        max-width: 532px;
+        color: $colorWhite;
     }
 }
 
@@ -102,6 +127,23 @@ a {
         border-radius: 60px;
         font-size: clamp(1.25rem, 1.102rem + 0.74vw, 1.75rem);
         letter-spacing: -0.48px;
+    }
+
+    &--projects {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: unset;
+        border: 1px solid $colorAccent;
+        z-index: 3;
+        path {
+            fill: $colorAccent;
+        }
+
+        transition: background-color 0.2s linear;
     }
 }
 

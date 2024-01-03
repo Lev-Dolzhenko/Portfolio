@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BASE */
 @import url("/fonts/stylesheet.css");
 @-webkit-keyframes rotateLogotype {
@@ -190,11 +191,24 @@ a:hover {
   line-height: normal;
   color: #FCFCFD;
 }
+.titleH2--projects {
+  color: #fff;
+}
 
 .titleH3 {
   font-size: clamp(24px, 1.056rem + 2.22vw, 48px);
   font-weight: 600;
   line-height: 95%;
+}
+.titleH3--projects {
+  color: #FFF9F4;
+}
+.titleH3--projects--notActive {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #FFF9F4;
+  z-index: 2;
 }
 
 .subtitleP {
@@ -205,6 +219,10 @@ a:hover {
 }
 .subtitleP--benefits {
   width: 236px;
+}
+.subtitleP--projects {
+  max-width: 532px;
+  color: #fff;
 }
 
 .button {
@@ -245,6 +263,22 @@ a:hover {
   border-radius: 60px;
   font-size: clamp(1.25rem, 1.102rem + 0.74vw, 1.75rem);
   letter-spacing: -0.48px;
+}
+.button--projects {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: unset;
+  border: 1px solid #FD853A;
+  z-index: 3;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+.button--projects path {
+  fill: #FD853A;
 }
 
 .button:hover, .button:focus, .button:active {
@@ -536,6 +570,119 @@ a:hover {
     row-gap: 18px;
   }
 }
+.projects {
+  background-image: url("/content/main/projects/background.jpg");
+  background-size: cover;
+  /* Масштабирует изображение так, чтобы его ширина и высота полностью покрывали содержащий блок */
+  background-position: center;
+  /* Центрирует изображение в блоке */
+  background-repeat: no-repeat;
+  /* Отключает повторение изображения */
+  padding-top: 116px;
+  padding-bottom: 198px;
+}
+
+.projects__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 40px;
+}
+
+.projects__row__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 20px;
+}
+
+.projects__row__cards ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 100px;
+     -moz-column-gap: 100px;
+          column-gap: 100px;
+}
+
+.projects__row__card {
+  position: relative;
+  overflow: hidden;
+  max-width: 650px;
+  border-radius: 20px;
+  z-index: 10;
+}
+.projects__row__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(207deg, rgba(0, 0, 0, 0) 47.41%, rgba(0, 0, 0, 0.36) 76.39%, rgba(0, 0, 0, 0.5) 89.23%);
+  z-index: 1;
+}
+.projects__row__card:hover {
+  cursor: pointer;
+}
+.projects__row__card:hover .button {
+  background-color: #FD853A;
+}
+.projects__row__card:hover .button path {
+  fill: #fff;
+}
+.projects__row__card:hover .projects__row__card__info {
+  bottom: 0px;
+}
+.projects__row__card:hover .titleH3--projects--notActive {
+  display: none;
+}
+
+.projects__row__card__info {
+  position: absolute;
+  left: 0;
+  bottom: -270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 15px;
+  width: 100%;
+  max-width: 630px;
+  padding: 10px 24px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  z-index: 10;
+  -webkit-transition: bottom 0.2s linear;
+  transition: bottom 0.2s linear;
+}
+
 .footer {
   padding-top: 100px;
   padding-bottom: 25px;
